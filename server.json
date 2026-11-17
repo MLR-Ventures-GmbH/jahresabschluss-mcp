@@ -1,0 +1,52 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.jahresabschluss/buchhaltung",
+  "title": "Jahresabschluss.io – Buchhaltung & Steuern",
+  "description": "German bookkeeping: invoices, bank, receipts, fixed assets, EÜR, tax filing prep, annual reports",
+  "version": "2026.11.18",
+  "websiteUrl": "https://jahresabschluss.io/ki-agent",
+  "repository": {
+    "url": "https://github.com/MLR-Ventures-GmbH/jahresabschluss-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://jahresabschluss.io/favicon-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    },
+    {
+      "src": "https://jahresabschluss.io/favicon-192.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "192x192"
+      ]
+    },
+    {
+      "src": "https://jahresabschluss.io/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://jahresabschluss.io/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "io.jahresabschluss": {
+        "description_de": "Buchhaltung: Rechnungen, Bank, Belege, Anlagen, EÜR, Steuermeldungen vorbereiten, Jahresabschlüsse",
+        "description_en": "German bookkeeping: invoices, bank, receipts, fixed assets, EÜR, tax filing prep, annual reports",
+        "documentation": "https://jahresabschluss.io/buchhaltung-api",
+        "setup": "https://jahresabschluss.io/ki-agent",
+        "auth": "OAuth 2.0: authorization code with PKCE and dynamic client registration; scopes read, write, send; no refresh token, reconnect when access expires. An unauthenticated request gets 401 with the metadata address https://jahresabschluss.io/.well-known/oauth-protected-resource/mcp. Alternatively a per-company API key as bearer token ('Authorization: Bearer jab_live_…'), created in the app under 'KI-Agent & API'."
+      }
+    }
+  }
+}
